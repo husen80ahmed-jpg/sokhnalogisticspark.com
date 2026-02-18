@@ -1,461 +1,661 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="SokhnaLogisticsPark.com — premium B2B domain for logistics park branding, lead generation, and corridor visibility in Ain Sokhna & SCZONE ecosystem." />
-  <title>SokhnaLogisticsPark.com — Premium B2B Domain for Acquisition</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SokhnaLogisticsPark.com | أصل رقمي B2B لقطاع اللوجستيات</title>
+
+  <meta name="description" content="SokhnaLogisticsPark.com — أصل رقمي B2B مناسب لبوابة خدمات لوجستية، دليل مزودين، أو منصة توليد عملاء في نطاق العين السخنة/محور قناة السويس. عرض مستقل غير تابع لأي جهة." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png" />
+  <link rel="canonical" href="https://sokhnalogisticspark.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SokhnaLogisticsPark.com | أصل رقمي B2B" />
+  <meta property="og:description" content="Digital asset listing for B2B: lead-gen portal, supplier directory, brand protection — with clear non-affiliation disclaimer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.ibb.co/LDRm1VyD/unnamed-4.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     :root{
-      /* Port / Logistics palette */
-      --bg0:#050814;
-      --bg1:#081a33;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.10);
-      --stroke: rgba(255,255,255,.12);
-      --stroke2: rgba(255,255,255,.18);
-
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.72);
-      --muted2: rgba(255,255,255,.58);
-
-      --teal:#22d3ee;   /* sea */
-      --blue:#0ea5e9;   /* deep sea */
-      --gold:#fbbf24;   /* spotlight */
-      --mint:#34d399;
-
-      --shadow: 0 24px 70px rgba(0,0,0,.55);
-      --r:18px;
-      --r2:28px;
-      --max: 1160px;
-
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --gold:#c5a059;
+      --navy:#050a12;
+      --bg:#070e1a;
+      --white:#fff;
+      --muted:rgba(255,255,255,.74);
+      --card:rgba(255,255,255,.05);
+      --card2:rgba(197,160,89,.10);
+      --stroke:rgba(197,160,89,.28);
+      --shadow:0 14px 46px rgba(0,0,0,.55);
+      --radius:16px;
     }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box; margin:0; padding:0}
     body{
-      margin:0;
-      font-family: var(--sans);
-      color: var(--text);
-      background:
-        radial-gradient(900px 650px at 12% 10%, rgba(34,211,238,.16), transparent 55%),
-        radial-gradient(900px 650px at 88% 18%, rgba(251,191,36,.12), transparent 55%),
-        radial-gradient(900px 650px at 50% 96%, rgba(14,165,233,.12), transparent 60%),
-        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
-      overflow-x:hidden;
+      font-family:"Cairo", system-ui, -apple-system, Arial, sans-serif;
+      background:var(--navy);
+      color:var(--white);
+      line-height:1.75;
+    }
+    a{color:inherit}
+    .container{max-width:1120px; margin:0 auto; padding:0 18px;}
+
+    /* Brand */
+    .brand-logo{
+      position:fixed;
+      top:calc(18px + env(safe-area-inset-top));
+      right:18px;
+      z-index:60;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .brand-logo img{
+      width:140px;
+      filter:drop-shadow(0 6px 18px rgba(0,0,0,.55));
     }
 
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 60px}
-
-    /* Top bar */
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:10px 0 22px;
-    }
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{
-      width:44px; height:44px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(34,211,238,.95), rgba(251,191,36,.90));
-      box-shadow: 0 18px 45px rgba(34,211,238,.12);
-      position:relative; overflow:hidden;
-    }
-    .logo:before{
-      content:"";
-      position:absolute; inset:-60%;
-      background: radial-gradient(circle at 30% 35%, rgba(255,255,255,.55), transparent 46%);
-      transform: rotate(18deg);
-    }
-    .brand h1{margin:0; font-size:13px; letter-spacing:.6px; color:var(--muted); font-weight:800}
-    .tagline{margin:2px 0 0; font-size:12px; color:var(--muted2)}
-
-    .status{
-      display:flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border:1px solid var(--stroke);
-      border-radius:999px;
-      background: rgba(255,255,255,.04);
-      color:var(--muted);
-      backdrop-filter: blur(10px);
-    }
-    .dot{
-      width:9px; height:9px; border-radius:99px;
-      background: var(--mint);
-      box-shadow: 0 0 0 7px rgba(52,211,153,.12);
-    }
-
-    /* Layout */
+    /* Hero */
     .hero{
-      display:grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap:18px;
-      align-items:stretch;
-    }
-
-    .card{
-      border:1px solid var(--stroke);
-      border-radius: var(--r2);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
+      min-height:100svh;
+      padding:140px 0 120px;
+      background:
+        linear-gradient(rgba(5,10,18,.60), rgba(5,10,18,.95)),
+        url("https://i.ibb.co/LDRm1VyD/unnamed-4.jpg") center/cover no-repeat;
+      text-align:center;
       position:relative;
       overflow:hidden;
     }
-    .card .inner{position:relative; padding:26px}
-
-    /* Decorative corridor */
-    .corridor{
-      position:absolute; inset:-1px; pointer-events:none;
-    }
-    .corridor:before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        radial-gradient(700px 280px at 18% 10%, rgba(34,211,238,.14), transparent 60%),
-        radial-gradient(700px 280px at 82% 10%, rgba(251,191,36,.12), transparent 60%),
-        radial-gradient(900px 520px at 50% 115%, rgba(14,165,233,.10), transparent 65%);
-    }
-    .corridor:after{
-      content:"";
-      position:absolute;
-      left:50%; top:-40%;
-      width:560px; height:1040px;
-      transform: translateX(-50%) rotate(18deg);
-      background:
-        linear-gradient(180deg,
-          rgba(34,211,238,.00) 0%,
-          rgba(34,211,238,.10) 20%,
-          rgba(251,191,36,.11) 50%,
-          rgba(14,165,233,.10) 80%,
-          rgba(14,165,233,.00) 100%);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius: 999px;
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,.18);
-      mask-image: radial-gradient(circle at 50% 50%, black 65%, transparent 85%);
-      opacity:.95;
-    }
-
-    /* Domain pill */
-    .domainPill{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius: 999px;
-      border:1px solid rgba(34,211,238,.22);
-      background: rgba(0,0,0,.22);
-      backdrop-filter: blur(8px);
-      font-family: var(--mono);
-      font-size: 13px;
-      letter-spacing:.7px;
-      color: rgba(255,255,255,.90);
-    }
-    .spark{
-      width:10px; height:10px; border-radius:99px;
-      background: linear-gradient(135deg, var(--teal), var(--gold));
-      box-shadow: 0 0 0 7px rgba(34,211,238,.10);
-    }
-
-    .headline{
-      margin:14px 0 10px;
-      font-size: 44px;
-      line-height: 1.04;
-      letter-spacing: -0.8px;
-      font-weight: 880;
-    }
-    .sub{
-      margin:0;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.65;
-      max-width: 60ch;
-    }
-
-    .trustRow{
-      margin-top:16px;
+    .badge-row{
       display:flex;
       gap:10px;
+      justify-content:center;
       flex-wrap:wrap;
+      margin-bottom:18px;
     }
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 11px;
-      border-radius: 999px;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
       border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      color: var(--muted);
-      font-size:12.6px;
+      color:rgba(255,255,255,.92);
+      font-weight:800;
+      font-size:.96rem;
+      backdrop-filter: blur(10px);
     }
-    .chip i{
-      width:8px; height:8px; border-radius:99px;
-      background: var(--gold);
-      box-shadow: 0 0 0 6px rgba(251,191,36,.10);
+    .badge i{color:var(--gold)}
+    h1{
+      margin:8px 0 10px;
+      font-size:clamp(2.0rem, 7.2vw, 4.5rem);
+      color:var(--gold);
+      font-weight:900;
+      letter-spacing:-1px;
+    }
+    .domain{
+      direction:ltr;
+      unicode-bidi:plaintext;
       display:inline-block;
     }
-
-    .grid{
-      margin-top:16px;
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:12px;
+    .sub{
+      max-width:980px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:clamp(1.05rem, 2.2vw, 1.35rem);
     }
-    .feature{
-      padding:14px;
-      border-radius: var(--r);
+
+    /* Disclaimer */
+    .disclaimer{
+      margin:18px auto 0;
+      max-width:980px;
+      background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .feature b{display:block; font-size:13px; margin-bottom:6px}
-    .feature p{margin:0; font-size:12.8px; color:var(--muted); line-height:1.55}
-
-    .section{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    .li{
-      padding:14px;
-      border-radius: var(--r);
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .li b{display:block; font-size:13px; margin-bottom:6px}
-    .li p{margin:0; font-size:12.8px; color:var(--muted); line-height:1.6}
-
-    /* CTA */
-    .ctaTitle{margin:0 0 8px; font-size:16px; font-weight:850}
-    .ctaDesc{margin:0 0 14px; color:var(--muted); font-size:13.6px; line-height:1.6}
-
-    .btnRow{display:flex; flex-direction:column; gap:10px}
-    .btn{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:10px;
       padding:12px 14px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.04);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-      user-select:none;
+      border-radius:14px;
+      text-align:right;
+      color:rgba(255,255,255,.82);
+      font-size:.95rem;
     }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.26); background: rgba(255,255,255,.06)}
-    .btn strong{font-size:13.6px}
-    .btn span{font-size:12.6px; color:var(--muted)}
-    .arrow{font-family:var(--mono); color: rgba(255,255,255,.78)}
-
-    .primary{
-      border:1px solid rgba(34,211,238,.30);
-      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(251,191,36,.12));
-    }
-    .primary:hover{
-      border-color: rgba(34,211,238,.46);
-      background: linear-gradient(135deg, rgba(34,211,238,.22), rgba(251,191,36,.16));
+    .disclaimer i{color:var(--gold)}
+    .disclaimer .en{
+      direction:ltr;
+      unicode-bidi:plaintext;
+      display:block;
+      margin-top:6px;
+      color:rgba(255,255,255,.66);
+      font-size:.92rem;
     }
 
-    .meta{
-      margin-top:14px;
-      padding-top:14px;
-      border-top:1px solid rgba(255,255,255,.10);
-      display:grid;
+    /* KPI header */
+    .kpi-head{
+      margin:18px auto 0;
+      max-width:980px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
       gap:10px;
+      align-items:center;
+      text-align:right;
+      color:rgba(255,255,255,.80);
+      font-size:.95rem;
     }
-    .metaLine{
-      display:flex; justify-content:space-between; gap:12px;
-      font-size:12.6px; color:var(--muted);
-      padding:10px 12px;
-      border:1px dashed rgba(255,255,255,.16);
-      border-radius: 16px;
-      background: rgba(0,0,0,.18);
+    .kpi-head .left{
+      direction:ltr;
+      unicode-bidi:plaintext;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      color:rgba(255,255,255,.70);
     }
-    .metaLine code{
-      font-family:var(--mono);
-      color: rgba(255,255,255,.86);
-      background: transparent;
+    .kpi-head a{
+      text-decoration:none;
+      border-bottom:1px dashed rgba(197,160,89,.45);
+      color:rgba(255,255,255,.86);
     }
+
+    /* KPI Grid */
+    .kpi-grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:14px;
+      width:100%;
+    }
+    .kpi{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.10);
+      border-top:4px solid var(--gold);
+      border-radius:var(--radius);
+      padding:18px 16px;
+      text-align:right;
+      backdrop-filter: blur(10px);
+      transition:.25s ease;
+      min-height:160px;
+    }
+    .kpi:hover{transform:translateY(-6px); background:var(--card2)}
+    .kpi .v{
+      font-size:1.75rem;
+      font-weight:900;
+      color:var(--gold);
+      line-height:1.15;
+      margin-bottom:6px;
+      direction:ltr;
+      unicode-bidi:plaintext;
+      display:inline-block;
+    }
+    .kpi .t{
+      color:rgba(255,255,255,.78);
+      font-size:.95rem;
+    }
+    .mini{
+      margin-top:8px;
+      color:rgba(255,255,255,.70);
+      font-size:.92rem;
+    }
+    .kpi .s{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .src-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      text-decoration:none;
+      color:rgba(255,255,255,.80);
+      font-size:.92rem;
+      transition:.2s;
+    }
+    .src-pill:hover{transform:translateY(-2px); border-color:rgba(197,160,89,.38)}
+    .src-pill i{color:var(--gold)}
 
     .note{
-      margin-top:14px;
-      padding:14px;
-      border-radius: var(--r);
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.14);
-      color: var(--muted);
-      font-size:12.8px;
-      line-height:1.6;
+      margin:14px auto 0;
+      max-width:980px;
+      color:rgba(255,255,255,.66);
+      font-size:.92rem;
+      text-align:right;
     }
 
-    .footer{
-      margin-top:22px;
-      padding-top:14px;
-      border-top:1px solid rgba(255,255,255,.10);
-      color: var(--muted2);
-      font-size:12px;
+    /* Sections */
+    section.block{
+      background:var(--bg);
+      padding:74px 0;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      align-items:start;
+    }
+    .card{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:var(--radius);
+      padding:22px 20px;
+    }
+    .card h2{
+      margin:0 0 14px;
+      color:var(--gold);
+      font-size:1.35rem;
+      border-bottom:1px solid rgba(197,160,89,.32);
+      padding-bottom:10px;
       display:flex;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
     }
-    .footer a{color: rgba(255,255,255,.80); text-decoration:underline; text-underline-offset:3px}
+    .item{
+      padding:12px 0;
+      border-bottom:1px dashed rgba(255,255,255,.10);
+    }
+    .item:last-child{border-bottom:0}
+    .item strong{
+      display:block;
+      color:rgba(255,255,255,.95);
+      font-size:1.05rem;
+      margin-bottom:4px;
+    }
+    .item span{color:var(--muted); font-size:.98rem}
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero{grid-template-columns: 1fr;}
-      .headline{font-size: 36px}
-      .grid{grid-template-columns: 1fr}
-      .section{grid-template-columns: 1fr}
+    .usecases{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .uc{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(197,160,89,.18);
+      border-radius:var(--radius);
+      padding:18px 16px;
+      text-align:right;
+    }
+    .uc .t{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      color:var(--gold);
+      margin-bottom:8px;
+    }
+    .uc p{margin:0; color:var(--muted); font-size:.98rem}
+
+    /* CTA */
+    .cta-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(197,160,89,.35);
+      background:rgba(197,160,89,.10);
+      color:var(--white);
+      font-weight:900;
+      text-decoration:none;
+      cursor:pointer;
+      transition:.2s;
+    }
+    .pill:hover{transform:translateY(-2px)}
+    .pill i{color:var(--gold)}
+    .pill.primary{
+      background:var(--gold);
+      color:var(--navy);
+      border-color:transparent;
+    }
+    .pill.primary i{color:var(--navy)}
+    .pill.wa{
+      background:#25d366;
+      border-color:transparent;
+    }
+    .pill.wa i{color:#fff}
+
+    .listed-by{
+      margin-top:10px;
+      font-size:.95rem;
+      color:rgba(255,255,255,.70);
+    }
+    .listed-by b{color:rgba(255,255,255,.92)}
+
+    /* Sources */
+    .sources{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+    .source-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      text-decoration:none;
+      color:rgba(255,255,255,.82);
+      transition:.2s;
+      font-size:.95rem;
+    }
+    .source-link:hover{transform:translateY(-2px); border-color:rgba(197,160,89,.35)}
+    .source-link i{color:var(--gold)}
+
+    /* Sticky Contact Bar */
+    .contact-footer{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:calc(14px + env(safe-area-inset-bottom));
+      width:min(820px, 94%);
+      display:flex;
+      gap:10px;
+      z-index:80;
+      padding:10px;
+      border-radius:18px;
+      background:rgba(5,10,18,.70);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+    .btn{
+      flex:1;
+      padding:14px 12px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      transition:.2s;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-call{background:var(--gold); color:var(--navy); border-color:transparent}
+    .btn-wa{background:#25d366; color:#fff; border-color:transparent}
+    .btn-mail{background:#1b6cff; color:#fff; border-color:transparent}
+
+    .spacer{height:110px}
+
+    @media (max-width:980px){
+      .kpi-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
+      .usecases{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .hero{padding:132px 0 120px}
+      .brand-logo img{width:120px}
+      .kpi-head{justify-content:center; text-align:center;}
     }
   </style>
+
+  <!-- Minimal JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"SokhnaLogisticsPark.com",
+    "url":"https://sokhnalogisticspark.com/",
+    "description":"Independent domain asset listing (B2B). Not affiliated with any government entity or company.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"SnapTheName",
+      "logo":"https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>SnapTheName.com — Premium Domain Assets</h1>
-          <div class="tagline">B2B-ready digital real estate for strategic infrastructure markets</div>
-        </div>
-      </div>
-
-      <div class="status" title="Status">
-        <span class="dot" aria-hidden="true"></span>
-        <div style="display:flex; flex-direction:column; line-height:1.1">
-          <span style="font-weight:850; font-size:13px;">For Acquisition</span>
-          <span style="font-size:12px; color:var(--muted2)">Direct inquiry</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero">
-      <!-- Main value -->
-      <div class="card">
-        <div class="corridor" aria-hidden="true"></div>
-        <div class="inner">
-          <div class="domainPill">
-            <span class="spark" aria-hidden="true"></span>
-            <span>SokhnaLogisticsPark.com</span>
-          </div>
-
-          <div class="headline">Own the most direct brand address for Sokhna logistics.</div>
-          <p class="sub">
-            A premium, exact-match B2B domain designed for logistics park branding, corridor visibility, and high-intent inbound leads.
-            Ideal for operators, developers, 3PL/4PL providers, freight forwarders, and industrial ecosystem platforms serving Ain Sokhna and the SCZONE supply chain.
-          </p>
-
-          <div class="trustRow" aria-label="Trust signals">
-            <div class="chip"><i></i> Enterprise positioning</div>
-            <div class="chip"><i></i> Lead-gen ready</div>
-            <div class="chip"><i></i> Secure transfer</div>
-            <div class="chip"><i></i> Serious inquiries only</div>
-          </div>
-
-          <div class="grid" role="list">
-            <div class="feature" role="listitem">
-              <b>Instant credibility</b>
-              <p>A clear, memorable name that communicates location + sector in one glance.</p>
-            </div>
-            <div class="feature" role="listitem">
-              <b>High-intent search fit</b>
-              <p>Built for buyers looking for “Sokhna logistics park” services, partners, and opportunities.</p>
-            </div>
-            <div class="feature" role="listitem">
-              <b>Multiple use cases</b>
-              <p>Brand front door, project portal, supplier directory, or B2B marketplace landing.</p>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="li">
-              <b>Best-fit buyers</b>
-              <p>Logistics park developers • Operators • Ports/terminals ecosystem • 3PL/4PL • Freight forwarders • Ship agencies.</p>
-            </div>
-            <div class="li">
-              <b>Best-fit positioning</b>
-              <p>“The corridor brand” — convert attention into authority and inbound commercial conversations.</p>
-            </div>
-          </div>
-
-          <div class="note">
-            <b style="color:rgba(255,255,255,.85)">Note:</b>
-            This domain is offered as a geographic-industry brand asset and is not presented as an official channel of any entity.
-            Transfer can be handled securely upon agreement.
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="card">
-        <div class="inner">
-          <h2 class="ctaTitle">Request price & acquisition terms</h2>
-          <p class="ctaDesc">
-            Contact us to receive pricing, transfer process, and optional lease-to-own structure suitable for corporate budgeting.
-          </p>
-
-          <div class="btnRow">
-            <a class="btn primary"
-               href="https://wa.me/201000001802?text=Hello%20Hussein%2C%20I%27m%20interested%20in%20SokhnaLogisticsPark.com.%20Please%20share%20pricing%20and%20acquisition%20terms."
-               target="_blank" rel="noopener">
-              <div>
-                <strong>WhatsApp</strong><br>
-                <span>+20 100 000 1802</span>
-              </div>
-              <div class="arrow">→</div>
-            </a>
-
-            <a class="btn"
-               href="mailto:hussein.lashin@snapthename.com?subject=SokhnaLogisticsPark.com%20-%20Acquisition%20Inquiry&body=Hello%20Hussein%2C%0A%0AI%27m%20interested%20in%20acquiring%20SokhnaLogisticsPark.com.%0APlease%20share%20the%20price%2C%20terms%2C%20and%20transfer%20process.%0A%0ACompany%3A%0ARole%3A%0AUse%20case%3A%0A%0AThanks.">
-              <div>
-                <strong>Email</strong><br>
-                <span>hussein.lashin@snapthename.com</span>
-              </div>
-              <div class="arrow">→</div>
-            </a>
-
-            <a class="btn" href="tel:+201000001802">
-              <div>
-                <strong>Call</strong><br>
-                <span>+20 100 000 1802</span>
-              </div>
-              <div class="arrow">→</div>
-            </a>
-          </div>
-
-          <div class="meta" aria-label="Details">
-            <div class="metaLine">
-              <span>Asset</span>
-              <code>Premium .COM</code>
-            </div>
-            <div class="metaLine">
-              <span>Use cases</span>
-              <code>Brand • Portal • Directory</code>
-            </div>
-            <div class="metaLine">
-              <span>Seller</span>
-              <code>SnapTheName.com</code>
-            </div>
-          </div>
-
-          <div class="note" style="margin-top:14px">
-            <b style="color:rgba(255,255,255,.85)">Fast path:</b>
-            Send your company name + intended use case, and we’ll respond with a direct price and a secure transfer workflow.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div>© <span id="y"></span> SnapTheName.com — B2B Domain Assets</div>
-      <div>
-        <a href="mailto:hussein.lashin@snapthename.com?subject=Portfolio%20Inquiry">Portfolio inquiry</a>
-        &nbsp;•&nbsp;
-        <a href="https://wa.me/201000001802" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
+  <div class="brand-logo" aria-label="SnapTheName">
+    <img src="https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png" alt="SnapTheName Logo" loading="lazy" />
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <header class="hero">
+    <div class="container">
+
+      <div class="badge-row">
+        <div class="badge"><i class="fa-solid fa-gem"></i> Digital Asset Listing</div>
+        <div class="badge"><i class="fa-solid fa-briefcase"></i> B2B Use-cases</div>
+        <div class="badge"><i class="fa-solid fa-shield-halved"></i> Brand-safe</div>
+      </div>
+
+      <h1><span class="domain">SokhnaLogisticsPark.com</span></h1>
+
+      <p class="sub">
+        أصل رقمي B2B لقطاع اللوجستيات — مناسب كبوابة خدمات، دليل مزودين، أو منصة توليد عملاء في نطاق العين السخنة/محيط المنطقة الاقتصادية.
+      </p>
+
+      <div class="disclaimer">
+        <i class="fa-solid fa-circle-info"></i>
+        <strong>تنويه:</strong> هذا عرض “اسم نطاق” مستقل وغير تابع لأي جهة حكومية أو شركة. الاسم يُستخدم كمرجع جغرافي/قطاعي فقط، ولا يشير لصفة رسمية.
+        <span class="en">Disclaimer: Independent domain asset listing. Not affiliated with any government entity or company.</span>
+      </div>
+
+      <div class="kpi-head">
+        <div>
+          <strong>مؤشرات رسمية منشورة (هيئة قناة السويس) — سياق عام للمنطقة</strong>
+        </div>
+        <div class="left">
+          <span>Last update: 8 Feb 2026</span>
+          <a href="#sources">Sources</a>
+        </div>
+      </div>
+
+      <!-- Official SCA Numbers (with sources) -->
+      <div class="kpi-grid" role="list" aria-label="Official SCA figures (reference)">
+        <div class="kpi" role="listitem">
+          <div class="v">$449M</div>
+          <div class="t">إيرادات منذ بداية 2026 (كما ورد في بيان SCA)</div>
+          <div class="s">
+            <a class="src-pill" href="https://www.suezcanal.gov.eg/English/MediaCenter/News/Pages/Sca_8-2-2026.aspx" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> SCA (8 Feb 2026)
+            </a>
+          </div>
+        </div>
+
+        <div class="kpi" role="listitem">
+          <div class="v">1,315</div>
+          <div class="t">سفينة عبرت منذ بداية 2026 (حسب SCA)</div>
+          <div class="s">
+            <a class="src-pill" href="https://www.suezcanal.gov.eg/English/MediaCenter/News/Pages/Sca_8-2-2026.aspx" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> SCA (8 Feb 2026)
+            </a>
+          </div>
+        </div>
+
+        <div class="kpi" role="listitem">
+          <div class="v">56M tons</div>
+          <div class="t">حمولة صافية منذ بداية 2026 (حسب SCA)</div>
+          <div class="s">
+            <a class="src-pill" href="https://www.suezcanal.gov.eg/English/MediaCenter/News/Pages/Sca_8-2-2026.aspx" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> SCA (8 Feb 2026)
+            </a>
+          </div>
+        </div>
+
+        <div class="kpi" role="listitem">
+          <div class="v">+18.5%</div>
+          <div class="t">زيادة الإيرادات (النصف الأول FY 2025/26 مقارنة بالعام السابق)</div>
+          <div class="mini">متضمنًا: +5.8% زيادة السفن • +16% زيادة الحمولة الصافية</div>
+          <div class="s">
+            <a class="src-pill" href="https://www.suezcanal.gov.eg/English/MediaCenter/News/Pages/Sca_8-2-2026.aspx" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> SCA (8 Feb 2026)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        ملاحظة: هذه الأرقام تُعرض كـ <strong>سياق رسمي منشور</strong> عن قناة السويس (وليس عن “السخنة” تحديدًا)، ولا تمثل ضمانًا أو ادعاءً مرتبطًا بأي كيان.
+      </p>
+
+    </div>
+  </header>
+
+  <section class="block">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card">
+          <h2><i class="fa-solid fa-gem"></i> لماذا هذا الدومين “مناسب” لقرار B2B؟</h2>
+
+          <div class="item">
+            <strong>وضوح فوري (Instant Clarity)</strong>
+            <span>اسم جغرافي + قطاع = فهم سريع داخل اجتماعات الإدارة وفرق التسويق/التحول الرقمي.</span>
+          </div>
+
+          <div class="item">
+            <strong>قابل للبيع أو التشغيل</strong>
+            <span>يمكن تشغيله كواجهة بسيطة لجمع الطلبات أو كدليل مزودين — أو امتلاكه كأصل Brand protection.</span>
+          </div>
+
+          <div class="item">
+            <strong>تموضع Brand-safe</strong>
+            <span>الصفحة تتجنب أي إيحاء رسمي وتوضح استقلالية الأصل الرقمي — لتقليل الالتباس.</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="fa-solid fa-diagram-project"></i> Use-cases (3 مسارات واقعية)</h2>
+
+          <div class="usecases">
+            <div class="uc">
+              <div class="t"><i class="fa-solid fa-magnifying-glass"></i> Lead-Gen Portal</div>
+              <p>استقبال طلبات خدمات (تخزين/تخليص/نقل/3PL) وتحويلها لمزودين مع SLA بسيط.</p>
+            </div>
+
+            <div class="uc">
+              <div class="t"><i class="fa-solid fa-list-check"></i> Supplier Directory</div>
+              <p>دليل مزودين: شركات + خدمات + تصنيفات + صفحات تعريفية قابلة للبحث.</p>
+            </div>
+
+            <div class="uc">
+              <div class="t"><i class="fa-solid fa-shield"></i> Brand Protection</div>
+              <p>حماية التسمية وتقليل التشابه، مع صفحة تعريفية للشركة/الخدمات (بدون إيحاء رسمي).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="background:#060c16;">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card">
+          <h2><i class="fa-solid fa-handshake"></i> ما الذي نطلبه الآن؟</h2>
+
+          <div class="item">
+            <strong>كيان B2B جاد</strong>
+            <span>شركة لوجستيات/منصة/مطور أعمال… أو مستثمر لديه خطة تشغيل واضحة.</span>
+          </div>
+
+          <div class="item">
+            <strong>خطوة واحدة</strong>
+            <span>لو تقدر: <strong>وجّهني لصاحب القرار</strong> المسؤول عن الأصول الرقمية/البراند/الموقع.</span>
+          </div>
+
+          <div class="item">
+            <strong>هيكلة نقل الملكية</strong>
+            <span>نقل الدومين عبر مُسجّل نطاقات معتمد (Account Push / Transfer) + اتفاق تحويل مختصر + فاتورة.</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="fa-solid fa-envelope-open-text"></i> تواصل سريع (B2B)</h2>
+
+          <div class="item">
+            <strong>بدون تعقيد</strong>
+            <span>رسالة واحدة تكفي: (Decision Maker Referral) + Use-case + أفضل وسيلة تواصل.</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="pill primary" href="mailto:hussein.lashin@snapthename.com?subject=SokhnaLogisticsPark.com%20-%20Decision%20Maker%20Referral&body=Please%20refer%20me%20to%20the%20decision%20maker%20for%20domains%2Fdigital%20assets.%0A%0ACompany%3A%0ARole%3A%0AUse-case%3A%0APhone%3A%0A">
+              <i class="fa-solid fa-arrow-right"></i> وجّهني لصاحب القرار
+            </a>
+
+            <a class="pill wa" href="https://wa.me/201000001802" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> واتساب
+            </a>
+
+            <a class="pill" href="mailto:hussein.lashin@snapthename.com?subject=SokhnaLogisticsPark.com%20-%20Inquiry">
+              <i class="fa-solid fa-envelope"></i> البريد الرسمي
+            </a>
+          </div>
+
+          <div class="listed-by">
+            Listed by <b>SnapTheName</b> — Hussein Lashin
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sources">
+    <div class="container">
+      <div class="card">
+        <h2><i class="fa-solid fa-link"></i> مصادر الأرقام (Official / Reference)</h2>
+
+        <div class="item">
+          <strong>المصدر الأساسي</strong>
+          <span>هيئة قناة السويس — خبر بتاريخ 8 فبراير 2026 (يتضمن: $449M / 1,315 سفينة / 56 مليون طن / 18.5% + 5.8% + 16%).</span>
+        </div>
+
+        <div class="sources">
+          <a class="source-link" href="https://www.suezcanal.gov.eg/English/MediaCenter/News/Pages/Sca_8-2-2026.aspx" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-building-columns"></i> SCA (8 Feb 2026)
+          </a>
+
+          <a class="source-link" href="https://www.egypttoday.com/Article/1/144960/Suez-Canal-Authority-Chief-Over-1-300-ships-transit-canal" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-newspaper"></i> EgyptToday (coverage)
+          </a>
+
+          <a class="source-link" href="https://www.aa.com.tr/en/middle-east/egypt-s-suez-canal-posts-revenue-rebound-earning-449-million-since-start-of-2026/3824222" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-globe"></i> Anadolu (coverage)
+          </a>
+        </div>
+
+        <div class="disclaimer" style="margin-top:14px">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <strong>ملاحظة قانونية:</strong> هذا العرض يخص “اسم نطاق”. لا يمثل بيانًا رسميًا أو تعهدًا، وأي بيانات تُستخدم كمرجع منشور فقط.
+          <span class="en">Legal note: This page lists a domain name for sale/partnership. No official representation. Figures are referenced from published sources.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer" aria-hidden="true"></div>
+
+  <nav class="contact-footer" aria-label="Contact actions">
+    <a href="tel:+201000001802" class="btn btn-call" aria-label="Call">
+      <i class="fa-solid fa-phone"></i> ناقش الشراء
+    </a>
+    <a href="https://wa.me/201000001802" class="btn btn-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i> واتساب
+    </a>
+    <a href="mailto:hussein.lashin@snapthename.com?subject=SokhnaLogisticsPark.com%20-%20Decision%20Maker%20Referral" class="btn btn-mail" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i> Decision Maker
+    </a>
+  </nav>
+
 </body>
 </html>
